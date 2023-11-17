@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders\imm;
+use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,6 +16,11 @@ class Gender extends Seeder
      */
     public function run()
     {
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'email' => 'admin@gomezpalacio.gob.mx',
+            'password' => Hash::make('admin123'),
+           ]);
        DB::table('genders')->insert([
         "gender"=>"Femenino",
         'created_at' => now()

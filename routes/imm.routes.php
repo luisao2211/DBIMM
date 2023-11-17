@@ -315,9 +315,9 @@ Route::middleware('auth:sanctum')->group(function(){
     });
     Route::post('/auth/logout', [UserImmController::class, 'logout']);
 });
-
 Route::post('/auth/login', [UserImmController::class, 'login']);
 Route::post('/auth/register', [UserImmController::class, 'signup']);
+
 
 
 
